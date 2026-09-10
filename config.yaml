@@ -1,0 +1,116 @@
+defaults:
+  passengers: 1
+  cabin_class: economy
+  max_results: 50
+  anywhere_concurrency: 10   # max parallel API calls for ANYWHERE searches
+
+cache:
+  ttl_seconds: 300           # 5-minute TTL for flight results
+  directory: ~/.flight_cache
+
+filters:
+  cheap:
+    max_price: 200
+
+  nonstop_only:
+    stops: 0
+
+  business_trip:
+    departure_time_start: "06:00"
+    departure_time_end: "10:00"
+    stops: 0
+
+  weekend_escape:
+    max_price: 400
+    stops: 1
+
+airports:
+  major:
+    # North America
+    - ATL
+    - LAX
+    - ORD
+    - DFW
+    - DEN
+    - JFK
+    - SFO
+    - LAS
+    - MCO
+    - SEA
+    - MIA
+    - PHX
+    - EWR
+    - MSP
+    - BOS
+    - DTW
+    - PHL
+    - FLL
+    - BWI
+    - IAD
+    - SLC
+    - PDX
+    - HNL
+    - SAN
+    - TPA
+    - AUS
+    - IAH
+    - BNA
+    - RDU
+    - YYZ
+    - YVR
+    - YUL
+    - MEX
+    - GRU
+    - EZE
+    - BOG
+    - LIM
+    - SCL
+    # Europe
+    - LHR
+    - CDG
+    - AMS
+    - FRA
+    - MAD
+    - BCN
+    - FCO
+    - MUC
+    - ZRH
+    - VIE
+    - CPH
+    - OSL
+    - ARN
+    - HEL
+    - LIS
+    - ATH
+    - IST
+    - WAW
+    - BRU
+    - DUB
+    - LGW
+    # Middle East & Africa
+    - DXB
+    - DOH
+    - AUH
+    - CAI
+    - JNB
+    - NBO
+    - ADD
+    # Asia Pacific
+    - PEK
+    - PVG
+    - HKG
+    - SIN
+    - BKK
+    - KUL
+    - CGK
+    - MNL
+    - ICN
+    - NRT
+    - HND
+    - SYD
+    - MEL
+    - BNE
+    - AKL
+    - DEL
+    - BOM
+    - BLR
